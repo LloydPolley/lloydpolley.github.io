@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,500,700&display=swap");
+.hero-bg {
+  background-color: #192147;
+  clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+}
+.hero .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero h1 {
+  color: white;
+  margin: 0em;
+  transition: 0.8s cubic-bezier(0.65, 0.05, 0.36, 1) color;
+}
+.hero h1.active {
+  color: white;
+}
+.hero p {
+  color: white;
+}
+
+.work-piece {
+  width: 97vw;
+  min-height: 300px;
+  max-width: 1000px;
+  margin: 1em auto;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  background-size: auto 100%;
+  background-position: center;
+}
+.work-piece::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #141414;
+  z-index: 0;
+  opacity: 0.1;
+  transition: 0.5s ease all;
+  width: 100%;
+  height: 100%;
+}
+.work-piece__hover-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  display: none;
+}
+.work-piece__hover-content a {
+  color: white;
+  text-decoration: none;
+}
+.work-piece.work-piece:hover::before {
+  opacity: 0.8;
+}
+.work-piece.work-piece:hover__hover-content {
+  opacity: 1;
+}
+.work-piece h2 {
+  text-align: left;
+  z-index: 2;
+  color: white;
+  transition: 0.7s ease all;
+  position: absolute;
+}
+.work-piece__tech {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5em;
+  background-color: rgba(41, 41, 41, 0.4);
+  opacity: 0;
+  transition: 0.2s ease all;
+  transform: translateY(10%);
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+}
+.work-piece img {
+  display: block;
+  max-width: 100%;
+  position: relative;
+}
+
+@media (min-width: 1000px) {
+  .work-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 0;
+    justify-content: space-between;
+    width: 97vw;
+    max-width: 1400px;
+  }
+  .work-section h2 {
+    margin-top: 0;
+  }
+  .work-section .work-piece {
+    width: 49%;
+    margin: 1% 0;
+    min-height: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .work-section h2 {
+    margin-top: 0;
+  }
+  .work-section .work-piece {
+    width: 32%;
+    margin: 1% 0;
+    min-height: 500px;
+  }
+}
+.work-piece:hover .work-piece__tech {
+  opacity: 1;
+  transform: translateY(0);
+}
+.work-piece:hover .work-piece__hover-content {
+  opacity: 1;
+  display: block;
+  transform: translateY(0) translateX(-50%);
+}
+
+.ion-logo {
+  color: white;
+  font-size: 32px;
+}
+
+.iconify {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+
+.react-project {
+  background-image: url("../files/imgs/afterlife-green.jpg");
+}
+
+.parallax-project {
+  background-image: url("https://riverisland.scene7.com/is/image/RiverIsland/c20200228-wk10-wlp-hero-new-arrivals_DNT?flush3&$retina$");
+}
+
+.threeD-project {
+  background-image: url("https://images.unsplash.com/photo-1568197355910-4de260fb52ce");
+}
+
+aside {
+  min-width: 30px;
+  z-index: 1;
+}
+
+footer, nav {
+  position: relative;
+  z-index: 2;
+  position: fixed;
+  max-width: 2000px;
+  width: 100%;
+  background-color: white;
+  min-height: 30px;
+  color: #6d6d6d;
+  opacity: 0.75;
+}
+footer p, nav p {
+  margin: 0.5em;
+  color: rgba(151, 151, 151, 0.801);
+}
+
+nav {
+  top: 0;
+}
+nav .site-name {
+  position: absolute;
+  left: 2%;
+  font-size: 0.75em;
+  font-weight: 500;
+}
+
+footer {
+  bottom: 0;
+}
+footer .site-contact {
+  position: absolute;
+  left: 2%;
+  font-size: 0.75em;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 10vw;
+}
+
+h2 {
+  font-size: 7vw;
+  padding: 0% 3%;
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 10em;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+}
+.footer {
+  margin-bottom: 10%;
+  width: 97vw;
+  max-width: 1400px;
+  margin: 3% auto;
+  text-align: center;
+}
+.footer h2 {
+  margin: 0;
+  padding: 0;
+}
+.cta {
+  border: 3px solid #192147;
+  text-decoration: none;
+  color: #192147;
+  padding: 1%;
+}
+
+body {
+  font-family: "Roboto Slab", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #FCFCFC;
+}
+
+.page-container {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.icon-inner {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

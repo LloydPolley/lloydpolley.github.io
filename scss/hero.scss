@@ -1,0 +1,40 @@
+
+.hero-bg{
+    // background-color: #3F4045;
+    // background-color: #3F4045;
+    background-color: rgb(25, 33, 71);
+    clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
+}
+
+.hero{
+    position: relative;
+    height: 100vh;
+    
+    // margin-bottom: -15%;
+
+    .hero-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    h1{
+        
+        color: white;
+        margin: 0em;
+        transition: .8s cubic-bezier(0.65, 0.05, 0.36, 1) color;
+
+        &.active{
+            color: white;
+        }
+    }
+    p{
+        color: white;
+    }
+}
+
+@media(min-width: 1000px){
+    .hero{
+        // margin-bottom: -5%;
+    }
+}
