@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,500,700&display=swap");
 .hero-bg {
-  background-color: #192147;
+  background-color: #071227;
+  background-image: url("../files/imgs/prism.png");
   clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
+  -webkit-clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
 }
 
 .hero {
@@ -226,8 +228,31 @@ h2 {
   text-align: center;
 }
 .footer h2 {
+  position: relative;
   margin: 0;
   padding: 0;
+}
+.footer h2::after {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer__email {
+  margin: 3% auto 0;
+}
+.footer__icons {
+  margin: 3% auto 0;
+}
+.footer__icons a {
+  text-decoration: none;
+}
+.footer__icons .ion-logo {
+  color: black;
 }
 .cta {
   border: 3px solid #192147;

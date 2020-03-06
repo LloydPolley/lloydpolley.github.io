@@ -1,9 +1,11 @@
 
 .hero-bg{
+    background-color: rgb(7, 18, 39);
     // background-color: #3F4045;
-    // background-color: #3F4045;
-    background-color: rgb(25, 33, 71);
+    // background-color: rgb(25, 33, 71);
+    background-image: url('../files/imgs/prism.png');
     clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
+    -webkit-clip-path:polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
 }
 
 .hero{
