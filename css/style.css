@@ -2,9 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,500,700&display=swap");
 .hero-bg {
   background-color: #071227;
-  background-image: url("../files/imgs/prism.png");
-  clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
-  -webkit-clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
 }
 
 .hero {
@@ -27,6 +24,25 @@
 }
 .hero p {
   color: white;
+}
+
+@media (min-width: 1000px) {
+  .hero-bg {
+    clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
+    -webkit-clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
+  }
+}
+.hero-bg-anim {
+  position: absolute;
+  background-color: green;
+  width: 0%;
+  height: 100%;
+  bottom: 0;
+  transition: 1s ease all;
+}
+
+.hero-bg:hover .hero-bg-anim {
+  width: 100%;
 }
 
 .work-piece {
