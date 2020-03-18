@@ -1,8 +1,8 @@
 
 .hero-bg{
-    background-color: rgb(7, 18, 39);
+    // background-color: rgb(7, 18, 39);
     // background-color: #3F4045;
-    // background-color: rgb(25, 33, 71);
+    background-color: rgb(25, 33, 71);
     // background-image: url('../files/imgs/prism.png');
 }
 
@@ -35,8 +35,10 @@
 
 @media(min-width: 1000px){
     .hero-bg{
-        clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
-    -webkit-clip-path:polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 80%, 0% 100%);
+    -webkit-clip-path:polygon(0% 0%, 100% 0, 100% 80%, 0% 100%);
+    // clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
+    // -webkit-clip-path:polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
     }
     
 }
@@ -50,7 +52,7 @@
     transition: 1s ease all;
 }
 
-.hero-bg:hover .hero-bg-anim{
-    // background-color: green;
-    width: 100%;
-}
+// .hero-bg:hover .hero-bg-anim{
+//     // background-color: green;
+//     width: 100%;
+// }

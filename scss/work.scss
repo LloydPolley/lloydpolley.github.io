@@ -12,6 +12,8 @@
   background-color: black;
   background-size: auto 100%;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
   // clip-path: polygon(0% 0%, 100% 0, 110% 100%, 0% 100%);
 
   &::before {
@@ -19,9 +21,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(0, 0, 0);
     z-index: 0;
-    opacity: 0.1;
+    opacity: 0;
     transition: 0.5s ease all;
     width: 100%;
     height: 100%;
@@ -44,8 +46,12 @@
   }
 
   &.work-piece:hover {
+    // box-shadow: 0px 0px 100px black;
     &::before {
       opacity: 0.8;
+    }
+    h2{
+      color: white;
     }
     &__hover-content{
       opacity: 1;
@@ -55,7 +61,7 @@
   h2 {
     text-align: left;
     z-index: 2;
-    color: white;
+    color: rgb(25, 33, 71);
     transition: 0.7s ease all;
     position: absolute;
   }
@@ -100,7 +106,7 @@
       width: 49%;
       margin: 1% 0;
       min-height: 500px;
-      // border-radius: 25px;
+      border-radius: 25px;
     }
   }
 }
@@ -142,11 +148,32 @@
 }
 
 .react-project{
-  background-image: url('../files/imgs/afterlife-green.jpg');
+  background-image: url('../files/imgs/realm.jpg');
+}
+.countries-project{
+  background-image: url('../files/imgs/uk-svg-1-original.png');
+  background-color: white;
+  background-size: 35%;
+}
+.rock-project{
+  background-image: url('../files/imgs/icon-scissors.svg');
+  background-color: white;
+  background-size: 40%;
 }
 .parallax-project{
   background-image: url('https://riverisland.scene7.com/is/image/RiverIsland/c20200228-wk10-wlp-hero-new-arrivals_DNT?flush3&$retina$');
+  filter: grayscale(1);
 }
 .threeD-project{
-  background-image: url('https://images.unsplash.com/photo-1568197355910-4de260fb52ce');
+  background-image: url('../files/imgs/3d.jpg');
+}
+.webpack-project{
+  background-image: url('../files/imgs/webpack-logo.jpg');
+  background-size: 100%;
+
+}
+.lazy-project{
+  background-image: url('../files/imgs/js-logo.jpg');
+  background-size: 75%;
+  background-position: 15% 25%;
 }

@@ -7,14 +7,14 @@ aside{
 
 footer, nav{
     position: relative;
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     max-width: 2000px;
     width: 100%;
     background-color: white;
     min-height: 30px;
     color: rgb(109, 109, 109);
-    opacity: .75;
+    opacity: 1;
 
 
     p{

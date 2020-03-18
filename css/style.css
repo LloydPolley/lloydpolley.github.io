@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,500,700&display=swap");
 .hero-bg {
-  background-color: #071227;
+  background-color: #192147;
 }
 
 .hero {
@@ -28,8 +28,8 @@
 
 @media (min-width: 1000px) {
   .hero-bg {
-    clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
-    -webkit-clip-path: polygon(0% 20%, 100% 0, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 80%, 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 80%, 0% 100%);
   }
 }
 .hero-bg-anim {
@@ -39,10 +39,6 @@
   height: 100%;
   bottom: 0;
   transition: 1s ease all;
-}
-
-.hero-bg:hover .hero-bg-anim {
-  width: 100%;
 }
 
 .work-piece {
@@ -55,15 +51,17 @@
   background-color: black;
   background-size: auto 100%;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
 }
 .work-piece::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #141414;
+  background-color: black;
   z-index: 0;
-  opacity: 0.1;
+  opacity: 0;
   transition: 0.5s ease all;
   width: 100%;
   height: 100%;
@@ -84,13 +82,16 @@
 .work-piece.work-piece:hover::before {
   opacity: 0.8;
 }
+.work-piece.work-piece:hover h2 {
+  color: white;
+}
 .work-piece.work-piece:hover__hover-content {
   opacity: 1;
 }
 .work-piece h2 {
   text-align: left;
   z-index: 2;
-  color: white;
+  color: #192147;
   transition: 0.7s ease all;
   position: absolute;
 }
@@ -131,6 +132,7 @@
     width: 49%;
     margin: 1% 0;
     min-height: 500px;
+    border-radius: 25px;
   }
 }
 @media (min-width: 1200px) {
@@ -166,15 +168,39 @@
 }
 
 .react-project {
-  background-image: url("../files/imgs/afterlife-green.jpg");
+  background-image: url("../files/imgs/realm.jpg");
+}
+
+.countries-project {
+  background-image: url("../files/imgs/uk-svg-1-original.png");
+  background-color: white;
+  background-size: 35%;
+}
+
+.rock-project {
+  background-image: url("../files/imgs/icon-scissors.svg");
+  background-color: white;
+  background-size: 40%;
 }
 
 .parallax-project {
   background-image: url("https://riverisland.scene7.com/is/image/RiverIsland/c20200228-wk10-wlp-hero-new-arrivals_DNT?flush3&$retina$");
+  filter: grayscale(1);
 }
 
 .threeD-project {
-  background-image: url("https://images.unsplash.com/photo-1568197355910-4de260fb52ce");
+  background-image: url("../files/imgs/3d.jpg");
+}
+
+.webpack-project {
+  background-image: url("../files/imgs/webpack-logo.jpg");
+  background-size: 100%;
+}
+
+.lazy-project {
+  background-image: url("../files/imgs/js-logo.jpg");
+  background-size: 75%;
+  background-position: 15% 25%;
 }
 
 aside {
@@ -184,14 +210,14 @@ aside {
 
 footer, nav {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   max-width: 2000px;
   width: 100%;
   background-color: white;
   min-height: 30px;
   color: #6d6d6d;
-  opacity: 0.75;
+  opacity: 1;
 }
 footer p, nav p {
   margin: 0.5em;
@@ -283,7 +309,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: #FCFCFC;
+  background-color: whitesmoke;
 }
 
 .page-container {
