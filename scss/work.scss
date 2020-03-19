@@ -1,9 +1,8 @@
 .work-section {
-
 }
 
 .work-piece {
-  width: 97vw;
+  width: 90vw;
   min-height: 300px;
   max-width: 1000px;
   margin: 1em auto;
@@ -11,10 +10,11 @@
   overflow: hidden;
   background-color: black;
   background-size: auto 100%;
-  background-position: center;
+  background-position: center 70%;
   background-repeat: no-repeat;
   background-color: white;
-  // clip-path: polygon(0% 0%, 100% 0, 110% 100%, 0% 100%);
+  border-radius: 25px;
+
 
   &::before {
     content: "";
@@ -29,17 +29,35 @@
     height: 100%;
   }
 
+  &__main {
+    z-index: 2;
+    margin-left: 1em;
+    h2 {
+      margin-bottom: 0;
+      text-align: left;
+      z-index: 2;
+      color: rgb(25, 33, 71);
+      // transition: 0.5s ease all;
+    }
+    p{
+      margin-left: .2em;
+    }
+  }
 
-  &__hover-content{
+  &__hover-content {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     transform: translate(-50%, -50%);
     z-index: 2;
     opacity: 0;
     display: none;
 
-    a{
+    .ion-logo{
+      font-size: 64px;
+    }
+
+    a {
       color: white;
       text-decoration: none;
     }
@@ -50,55 +68,49 @@
     &::before {
       opacity: 0.8;
     }
-    h2{
+    p {
       color: white;
     }
-    &__hover-content{
+    &__hover-content {
       opacity: 1;
     }
   }
 
-  h2 {
-    text-align: left;
-    z-index: 2;
-    color: rgb(25, 33, 71);
-    transition: 0.7s ease all;
-    position: absolute;
-  }
   &__tech {
     position: absolute;
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    padding: 0.5em;
-    background-color: rgba(41, 41, 41, 0.4);
     opacity: 0;
     transition: 0.2s ease all;
     transform: translateY(10%);
     bottom: 0;
     z-index: 2;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-    position: relative;
+    .icon-row{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      background-color: rgba(41, 41, 41, 0.4);
+      padding: 1em;
+      box-sizing: border-box;
+    }
+    p{
+      color: white;
+      margin-left: .5em;
+    }
   }
 }
 
-@media (min-width: 1000px) {
-  .work-section{
+@media (min-width: 700px) {
+  .work-section {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto 0;
     justify-content: space-between;
-    width: 97vw;    
+    width: 97vw;
     max-width: 1400px;
-  
 
-    h2{
+    h2 {
       margin-top: 0;
     }
 
@@ -106,14 +118,20 @@
       width: 49%;
       margin: 1% 0;
       min-height: 500px;
-      border-radius: 25px;
+
+      &__main {
+        z-index: 2;
+        margin: 1.5em;
+        h2 {
+        }
+      }
     }
   }
 }
 
 @media (min-width: 1200px) {
-  .work-section{
-    h2{
+  .work-section {
+    h2 {
       margin-top: 0;
     }
 
@@ -134,46 +152,48 @@
     display: block;
     transform: translateY(0) translateX(-50%);
   }
-
 }
-.ion-logo{
-    color: white;
-    font-size: 32px;
+.ion-logo {
+  color: white;
+  font-size: 32px;
 }
-.iconify{
+.iconify {
   display: inline-block;
   width: 32px;
   height: 32px;
   color: white;
 }
 
-.react-project{
-  background-image: url('../files/imgs/realm.jpg');
+//Backgrounds
+.react-project {
+  background-image: url("../files/imgs/realm.jpg");
+  background-position: center 51px;
 }
-.countries-project{
-  background-image: url('../files/imgs/uk-svg-1-original.png');
+.countries-project {
+  background-image: url("../files/imgs/uk-svg-1-original.png");
   background-color: white;
   background-size: 35%;
 }
-.rock-project{
-  background-image: url('../files/imgs/icon-scissors.svg');
+.rock-project {
+  background-image: url("../files/imgs/icon-scissors.svg");
   background-color: white;
   background-size: 40%;
 }
-.parallax-project{
-  background-image: url('https://riverisland.scene7.com/is/image/RiverIsland/c20200228-wk10-wlp-hero-new-arrivals_DNT?flush3&$retina$');
+.parallax-project {
+  background-image: url("https://riverisland.scene7.com/is/image/RiverIsland/c20200228-wk10-wlp-hero-new-arrivals_DNT?flush3&$retina$");
   filter: grayscale(1);
 }
-.threeD-project{
-  background-image: url('../files/imgs/3d.jpg');
+.threeD-project {
+  background-image: url("../files/imgs/3d.jpg");
+  background-position: center 71px;
 }
-.webpack-project{
-  background-image: url('../files/imgs/webpack-logo.jpg');
-  background-size: 100%;
+.webpack-project {
+  background-image: url("../files/imgs/webpack-logo.jpg");
+  background-size: 90%;
 
 }
-.lazy-project{
-  background-image: url('../files/imgs/js-logo.jpg');
-  background-size: 75%;
-  background-position: 15% 25%;
+.lazy-project {
+  background-image: url("../files/imgs/js-logo.jpg");
+  background-size: 65%;
+  background-position: 20% 55%;
 }

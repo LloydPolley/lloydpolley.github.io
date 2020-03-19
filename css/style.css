@@ -42,7 +42,7 @@
 }
 
 .work-piece {
-  width: 97vw;
+  width: 90vw;
   min-height: 300px;
   max-width: 1000px;
   margin: 1em auto;
@@ -50,9 +50,10 @@
   overflow: hidden;
   background-color: black;
   background-size: auto 100%;
-  background-position: center;
+  background-position: center 70%;
   background-repeat: no-repeat;
   background-color: white;
+  border-radius: 25px;
 }
 .work-piece::before {
   content: "";
@@ -66,14 +67,30 @@
   width: 100%;
   height: 100%;
 }
+.work-piece__main {
+  z-index: 2;
+  margin-left: 1em;
+}
+.work-piece__main h2 {
+  margin-bottom: 0;
+  text-align: left;
+  z-index: 2;
+  color: #192147;
+}
+.work-piece__main p {
+  margin-left: 0.2em;
+}
 .work-piece__hover-content {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   z-index: 2;
   opacity: 0;
   display: none;
+}
+.work-piece__hover-content .ion-logo {
+  font-size: 64px;
 }
 .work-piece__hover-content a {
   color: white;
@@ -82,41 +99,37 @@
 .work-piece.work-piece:hover::before {
   opacity: 0.8;
 }
-.work-piece.work-piece:hover h2 {
+.work-piece.work-piece:hover p {
   color: white;
 }
 .work-piece.work-piece:hover__hover-content {
   opacity: 1;
-}
-.work-piece h2 {
-  text-align: left;
-  z-index: 2;
-  color: #192147;
-  transition: 0.7s ease all;
-  position: absolute;
 }
 .work-piece__tech {
   position: absolute;
   left: 0;
   width: 100%;
   box-sizing: border-box;
-  padding: 0.5em;
-  background-color: rgba(41, 41, 41, 0.4);
   opacity: 0;
   transition: 0.2s ease all;
   transform: translateY(10%);
   bottom: 0;
   z-index: 2;
+}
+.work-piece__tech .icon-row {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  background-color: rgba(41, 41, 41, 0.4);
+  padding: 1em;
+  box-sizing: border-box;
 }
-.work-piece img {
-  display: block;
-  max-width: 100%;
-  position: relative;
+.work-piece__tech p {
+  color: white;
+  margin-left: 0.5em;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 700px) {
   .work-section {
     display: flex;
     flex-wrap: wrap;
@@ -132,7 +145,10 @@
     width: 49%;
     margin: 1% 0;
     min-height: 500px;
-    border-radius: 25px;
+  }
+  .work-section .work-piece__main {
+    z-index: 2;
+    margin: 1.5em;
   }
 }
 @media (min-width: 1200px) {
@@ -169,6 +185,7 @@
 
 .react-project {
   background-image: url("../files/imgs/realm.jpg");
+  background-position: center 51px;
 }
 
 .countries-project {
@@ -190,17 +207,18 @@
 
 .threeD-project {
   background-image: url("../files/imgs/3d.jpg");
+  background-position: center 71px;
 }
 
 .webpack-project {
   background-image: url("../files/imgs/webpack-logo.jpg");
-  background-size: 100%;
+  background-size: 90%;
 }
 
 .lazy-project {
   background-image: url("../files/imgs/js-logo.jpg");
-  background-size: 75%;
-  background-position: 15% 25%;
+  background-size: 65%;
+  background-position: 20% 55%;
 }
 
 aside {
@@ -249,8 +267,7 @@ h1 {
 }
 
 h2 {
-  font-size: 7vw;
-  padding: 0% 3%;
+  font-size: 2.5em;
 }
 
 @media (min-width: 1000px) {
