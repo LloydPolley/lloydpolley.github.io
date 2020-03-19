@@ -13,17 +13,13 @@
         &::after{
             content: "";
             width: 150px;
-            height: 1px;
+            height: 3px;
             background-color: black;
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
         }
-    }
-
-    &__email{
-        margin: 3% auto 0;
     }
     &__icons{
         margin: 3% auto 0;
@@ -32,6 +28,8 @@
         }
         .ion-logo{
             color: black;
+            font-size: 64px;
+            margin: 0 1%;
         }
     }
 
