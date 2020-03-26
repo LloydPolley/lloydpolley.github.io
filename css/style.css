@@ -34,12 +34,13 @@
 }
 .hero-bg-anim {
   position: absolute;
-  width: 0%;
+  width: 100%;
   height: 100%;
   bottom: 0;
   transition: 1s ease all;
   animation: bgSlide 0.5s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
   background-color: #192147;
+  transform: translateX(-100%);
 }
 
 .hero-content {
@@ -63,10 +64,10 @@
 
 @keyframes bgSlide {
   0% {
-    width: 0;
+    transform: translateX(-100%);
   }
   100% {
-    width: 100%;
+    transform: translateX(0%);
   }
 }
 @keyframes textSlideIn {
