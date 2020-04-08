@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,500&display=swap");
 .hero-bg {
-  background-color: white;
+  background-image: url("../files/imgs/hero.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .hero {
@@ -39,7 +43,6 @@
   bottom: 0;
   transition: 1s ease all;
   animation: bgSlide 0.5s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
-  background-color: #192147;
   transform: translateX(-100%);
 }
 
@@ -80,183 +83,57 @@
     opacity: 1;
   }
 }
+.work-section {
+  margin-bottom: 3em;
+}
+
 .work-piece {
   width: 90vw;
-  min-height: 300px;
   max-width: 1000px;
-  margin: 1em auto;
+  margin: 3em auto;
   position: relative;
   overflow: hidden;
-  background-color: black;
-  background-size: auto 100%;
-  background-position: center 70%;
-  background-repeat: no-repeat;
+  text-align: center;
+  border-radius: 5px;
   background-color: white;
-  border-radius: 25px;
 }
-.work-piece::before {
+.work-piece h2, .work-piece p {
+  color: white;
+  margin-bottom: 0;
+}
+.work-piece p {
+  font-size: 1em;
+}
+.work-piece img {
+  width: 100%;
+}
+.work-piece:hover::after {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.work-piece::after {
   content: "";
+  transition: 0.7s ease-out all;
   position: absolute;
-  top: 0;
-  left: 0;
-  background-color: black;
-  z-index: 0;
-  opacity: 0;
-  transition: 0.5s ease all;
+  top: 0%;
+  left: 0%;
   width: 100%;
   height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 0;
 }
 .work-piece__main {
-  z-index: 2;
-  margin-left: 1em;
-}
-.work-piece__main h2 {
-  margin-bottom: 0;
-  text-align: left;
-  z-index: 2;
-  color: #192147;
-}
-.work-piece__main p {
-  margin-left: 0.2em;
-}
-.work-piece__hover-content {
+  z-index: 1;
   position: absolute;
+  top: 50%;
   left: 50%;
-  top: 40%;
   transform: translate(-50%, -50%);
-  z-index: 2;
-  opacity: 0;
-  display: none;
-}
-.work-piece__hover-content .ion-logo {
-  font-size: 64px;
-}
-.work-piece__hover-content a {
-  color: white;
-  text-decoration: none;
-}
-.work-piece.work-piece:hover::before {
-  opacity: 0.8;
-}
-.work-piece.work-piece:hover__hover-content {
-  opacity: 1;
-}
-.work-piece__tech {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
-  opacity: 0;
-  transition: 0.2s ease all;
-  transform: translateY(10%);
-  bottom: 0;
-  z-index: 2;
-}
-.work-piece__tech .icon-row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  background-color: rgba(41, 41, 41, 0.4);
-  padding: 1em;
-  box-sizing: border-box;
-}
-.work-piece__tech p {
-  color: white;
-  margin-left: 0.5em;
 }
 
-@media (min-width: 700px) {
-  .work-section {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto 0;
-    justify-content: space-between;
-    width: 97vw;
-    max-width: 1400px;
-  }
-  .work-section h2 {
-    margin-top: 0;
-  }
-  .work-section .work-piece {
-    width: 49%;
-    margin: 1% 0;
-    min-height: 500px;
-  }
-  .work-section .work-piece__main {
-    z-index: 2;
-    margin: 1.5em;
+@media (min-width: 1000px) {
+  .work-piece {
+    margin: 10em auto;
   }
 }
-@media (min-width: 1200px) {
-  .work-section h2 {
-    margin-top: 0;
-  }
-  .work-section .work-piece {
-    width: 32%;
-    margin: 1% 0;
-    min-height: 500px;
-  }
-}
-.work-piece:hover .work-piece__tech {
-  opacity: 1;
-  transform: translateY(0);
-}
-.work-piece:hover .work-piece__hover-content {
-  opacity: 1;
-  display: block;
-  transform: translateY(0) translateX(-50%);
-}
-
-.ion-logo {
-  color: white;
-  font-size: 32px;
-}
-
-.iconify {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  color: white;
-}
-
-.react-project {
-  background-image: url("../files/imgs/realm.jpg");
-  background-position: center 51px;
-}
-
-.countries-project {
-  background-image: url("../files/imgs/uk-svg-1-original.png");
-  background-color: white;
-  background-size: 35%;
-}
-
-.rock-project {
-  background-image: url("../files/imgs/icon-scissors.svg");
-  background-color: white;
-  background-size: 40%;
-}
-
-.parallax-project {
-  background-image: url("https://riverisland.scene7.com/is/image/RiverIsland/c20200228-wk10-wlp-hero-new-arrivals_DNT?flush3&$retina$");
-  filter: grayscale(1);
-}
-
-.threeD-project {
-  background-image: url("../files/imgs/3d.jpg");
-  background-position: center 71px;
-}
-
-.webpack-project {
-  background-image: url("../files/imgs/webpack-logo.jpg");
-  background-size: 90%;
-}
-
-.lazy-project {
-  background-image: url("../files/imgs/js-logo.jpg");
-  background-size: 65%;
-  background-position: 20% 55%;
-}
-
 aside {
   min-width: 30px;
   z-index: 1;
@@ -356,12 +233,13 @@ h2 {
 }
 
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   background-color: whitesmoke;
+  background-image: url("https://www.freepik.com/free-photos-vectors/background");
 }
 
 .page-container {

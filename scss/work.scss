@@ -1,200 +1,68 @@
 .work-section {
+  margin-bottom: 3em;
 }
 
 .work-piece {
   width: 90vw;
-  min-height: 300px;
   max-width: 1000px;
-  margin: 1em auto;
+  margin: 3em auto;
   position: relative;
   overflow: hidden;
-  background-color: black;
-  background-size: auto 100%;
-  background-position: center 70%;
-  background-repeat: no-repeat;
-  background-color: white;
-  border-radius: 25px;
+  text-align: center;
+  border-radius: 5px;
+  
+  background-color: rgb(255, 255, 255);
 
 
-  &::before {
-    content: "";
+  h2, p{
+    color: rgb(255, 255, 255);
+    margin-bottom: 0;
+  }
+  p{
+    font-size: 1em;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  &:hover{
+    &::after{
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    h2, p{
+      // color: white;
+      // text-shadow: 0px 0px 10px white;
+    }
+  }
+
+  &::after{
+    content: '';
+    transition: .7s ease-out all;
     position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0);
-    z-index: 0;
-    opacity: 0;
-    transition: 0.5s ease all;
+    top: 0%;
+    left: 0%;
     width: 100%;
     height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 0;
+    // transform: translate(-50%, -50%);
   }
 
-  &__main {
-    z-index: 2;
-    margin-left: 1em;
-    h2 {
-      margin-bottom: 0;
-      text-align: left;
-      z-index: 2;
-      color: rgb(25, 33, 71);
-      // transition: 0.5s ease all;
-    }
-    p{
-      margin-left: .2em;
-    }
-  }
-
-  &__hover-content {
+  &__main{
+    z-index: 1;
     position: absolute;
+    top: 50%;
     left: 50%;
-    top: 40%;
     transform: translate(-50%, -50%);
-    z-index: 2;
-    opacity: 0;
-    display: none;
-
-    .ion-logo{
-      font-size: 64px;
-    }
-
-    a {
-      color: white;
-      text-decoration: none;
-    }
-  }
-
-  &.work-piece:hover {
-    // box-shadow: 0px 0px 100px black;
-    &::before {
-      opacity: 0.8;
-    }
-    p {
-      // color: white;
-    }
-    &__hover-content {
-      opacity: 1;
-    }
-  }
-
-  &__tech {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: 0.2s ease all;
-    transform: translateY(10%);
-    bottom: 0;
-    z-index: 2;
-
-    .icon-row{
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      background-color: rgba(41, 41, 41, 0.4);
-      padding: 1em;
-      box-sizing: border-box;
-    }
-    p{
-      color: white;
-      margin-left: .5em;
-    }
   }
 }
 
-@media (min-width: 700px) {
-  .work-section {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto 0;
-    justify-content: space-between;
-    width: 97vw;
-    max-width: 1400px;
-
-    h2 {
-      margin-top: 0;
-    }
-
-    .work-piece {
-      width: 49%;
-      margin: 1% 0;
-      min-height: 500px;
-
-      &__main {
-        z-index: 2;
-        margin: 1.5em;
-        h2 {
-        }
-      }
-    }
+@media(min-width: 1000px){
+  .work-piece{
+    margin: 10em auto;
   }
 }
 
-@media (min-width: 1200px) {
-  .work-section {
-    h2 {
-      margin-top: 0;
-    }
-
-    .work-piece {
-      width: 32%;
-      margin: 1% 0;
-      min-height: 500px;
-    }
-  }
-}
-.work-piece:hover {
-  .work-piece__tech {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .work-piece__hover-content {
-    opacity: 1;
-    display: block;
-    transform: translateY(0) translateX(-50%);
-  }
-}
-.ion-logo {
-  color: white;
-  font-size: 32px;
-}
-.iconify {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  color: white;
-}
 
 //Backgrounds
-.react-project {
-  background-image: url("../files/imgs/realm.jpg");
-  background-position: center 51px;
-}
-.countries-project {
-  background-image: url("../files/imgs/uk-svg-1-original.png");
-  background-color: white;
-  background-size: 35%;
-}
-.rock-project {
-  background-image: url("../files/imgs/icon-scissors.svg");
-  background-color: white;
-  background-size: 40%;
-}
-.parallax-project {
-  background-image: url("https://riverisland.scene7.com/is/image/RiverIsland/c20200228-wk10-wlp-hero-new-arrivals_DNT?flush3&$retina$");
-  filter: grayscale(1);
-}
-.threeD-project {
-  background-image: url("../files/imgs/3d.jpg");
-  background-position: center 71px;
-}
-.webpack-project {
-  background-image: url("../files/imgs/webpack-logo.jpg");
-  background-size: 90%;
-
-}
-.lazy-project {
-  background-image: url("../files/imgs/js-logo.jpg");
-  background-size: 65%;
-  background-position: 20% 55%;
-}
