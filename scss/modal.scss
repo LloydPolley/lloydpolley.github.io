@@ -1,0 +1,58 @@
+body {
+  position: relative;
+}
+
+.modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transition: 1s ease-out all;
+  opacity: 0;
+
+  &__close{
+      position: fixed;
+      right: 5%;
+      top: 5%;
+  }
+
+  &--show {
+    // z-index: 2;
+    // opacity: 1;
+    // animation: showModal 1s ease-out forwards;
+    // animation-direction: reverse;
+  }
+  &--hide {
+    // z-index: 2;
+    // opacity: 1;
+    // animation: showModal 1?: reverse;
+  }
+}
+
+// @keyframes showModal {
+//   0% {
+//     opacity: 0;
+//     z-index: 0;
+//   }
+
+//   10% {
+//     z-index: 2;
+//   }
+
+//   100% {
+//     z-index: 2;
+//     opacity: 1;
+//   }
+// }
+// @keyframes hideModal {
+//   0% {
+//     z-index: 2;
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//     z-index: 0;
+//   }
+// }
