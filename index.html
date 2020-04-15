@@ -16,15 +16,21 @@
 </head>
 
 <body>
-    <!-- <nav>
-        <p class="site-name">LWP</p>
-    </nav> -->
     <div class="modal">
-        <p class="close-modal--js modal__close">X</p>
+        <p class="close-modal--js modal__close"><ion-icon name="close-outline"></ion-icon></p>
         <div class="modal__content">
-            <img src=""/>
-            <h2></h2>
-            <p></p>
+            <img src="./files/imgs/maps.jpg" />
+            <div class="modal__text">
+                <h2>Countries</h2>
+                <p>React app which fetches from API</p>
+                <p>Tech used</p>
+                <ul>
+                    <li>React</li>
+                    <li>Sass</li>
+                </ul>
+                <a class="modal__link" href="">See site</a>
+            </div>
+
         </div>
     </div>
     <div class="page-container">
@@ -33,52 +39,51 @@
             <div class="hero page-section">
                 <div class="color-bg"></div>
                 <div class="hero-content">
-                    <h1>Lloyd Polley</h1>
-                    <p>Web developer</p>
+                    <h1>Web Developer</h1>
+                    <p>Lloyd Polley</p>
                 </div>
             </div>
-            <!-- <div class="work-button"><p>See work</p></div> -->
+            <div class="work-button">
+                <ion-icon name="construct-outline"></ion-icon>
+            </div>
         </div>
         <section class="work-section page-section">
             <div class="work-piece one-project">
                 <img src="./files/imgs/maps.jpg" />
                 <div class="work-piece__main">
-                    <h2>Countries</h2>
-                    <!-- <p>Fetch data from API</p> -->
+                    <h2>country</h2>
                 </div>
             </div>
             <div class="work-piece two-project">
                 <img src="./files/imgs/rock.jpg" />
 
                 <div class="work-piece__main">
-                    <h2>Rock Paper Scissors</h2>
-                    <p>Game in react</p>
+                    <h2>rock paper<br>scissors</h2>
                 </div>
             </div>
             <div class="work-piece three-project">
                 <img src="./files/imgs/music.jpg" />
                 <div class="work-piece__main">
-                    <h2>Track stream</h2>
-                    <p>Music streaming app</p>
+                    <h2>music service</h2>
                 </div>
             </div>
         </section>
         <section class="footer page-section">
-            <h2>Get in touch?</h2>
-            <div class="footer__icons">
-                <a href="mailto:lloyd_polley@msn.com" title="lloyd_polley@msn.com" class="">
-                    <ion-icon class="ion-logo" name="mail-outline"></ion-icon></span>
-                </a>
-
-                <a title="Github" target="_blank" href="https://github.com/LloydPolley">
-                    <ion-icon class="ion-logo" name="logo-github" title="Github" style="color: black;"></ion-icon>
-                </a>
-                <a title="Codepen" href="https://codepen.io/LloydPolley/">
-                    <ion-icon class="ion-logo" name="logo-codepen"></ion-icon>
-                </a>
-                <a title="Linkedin" href="https://www.linkedin.com/in/lloyd-polley-834784b8/">
-                    <ion-icon class="ion-logo" name="logo-linkedin"></ion-icon>
-                </a>
+            <div class="footer__flex">
+                <div class="footer__col">
+                    <p class="footer--title">Lloyd Polley</p>
+                    <a class="footer--text">lwpolley@gmail.com</a>
+                </div>
+                <div class="footer__col">
+                    <p class="footer--title">Contact</p>
+                    <a class="footer--text">Linkedin</a>
+                    <a class="footer--text">Email</a>
+                </div>
+                <div class="footer__col">
+                    <p class="footer--title">Code</p>
+                    <a class="footer--text">Github</a>
+                    <a class="footer--text">Codepen</a>
+                </div>
             </div>
         </section>
     </div>

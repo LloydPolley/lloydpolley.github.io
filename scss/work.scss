@@ -9,18 +9,17 @@
   position: relative;
   overflow: hidden;
   text-align: center;
-  border-radius: 5px;
+  background-attachment: fixed;
+  // border-radius: 5px;
   
   background-color: rgb(255, 255, 255);
 
 
   h2, p{
     color: rgb(255, 255, 255);
-    margin-bottom: 0;
+    margin: 0;
   }
-  p{
-    font-size: 1em;
-  }
+  
 
   img{
     width: 100%;
@@ -38,13 +37,13 @@
 
   &::after{
     content: '';
-    transition: .7s ease-out all;
+    transition: .3s ease-out all;
     position: absolute;
     top: 0%;
     left: 0%;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.5);
     z-index: 0;
     // transform: translate(-50%, -50%);
   }
@@ -55,6 +54,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 100%;
   }
 }
 

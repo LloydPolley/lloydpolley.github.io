@@ -9,50 +9,76 @@ body {
   top: 0;
   left: 0;
   background-color: white;
-  transition: 1s ease-out all;
+  transition: 1s ease-in-out all;
   opacity: 0;
+  pointer-events: none;
+  z-index: 2;
 
-  &__close{
-      position: fixed;
-      right: 5%;
-      top: 5%;
+  &__close {
+    position: fixed;
+    right: 1%;
+    top: 1%;
+    z-index: 3;
+    font-size: 40px;
+    margin: 0;
+  }
+  &.toggleModal {
+    opacity: 1 !important;
+    pointer-events: initial;
+    opacity: 1;
   }
 
-  &--show {
-    // z-index: 2;
-    // opacity: 1;
-    // animation: showModal 1s ease-out forwards;
-    // animation-direction: reverse;
+  &__content {
+    opacity: 0;
+    animation: animateIn 1s ease-in-out 2s 1 forwards;
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    img {
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 1000px;
+    }
   }
-  &--hide {
-    // z-index: 2;
-    // opacity: 1;
-    // animation: showModal 1?: reverse;
+  &__text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1em 2em;
+    width: 80%;
+    max-width: 600px;
+    box-sizing: border-box;
+  }
+
+  &__link {
+    display: block;
+    margin-top: 3em;
+    color: blue;
   }
 }
 
-// @keyframes showModal {
-//   0% {
-//     opacity: 0;
-//     z-index: 0;
-//   }
+@media (min-width: 700px) {
+  .modal {
+    &__content {
+      img {
+        top: 50%;
+      }
+    }
+  }
+}
 
-//   10% {
-//     z-index: 2;
-//   }
+@keyframes animateIn{
+  0%{
+    opacity: 0;
+  }
 
-//   100% {
-//     z-index: 2;
-//     opacity: 1;
-//   }
-// }
-// @keyframes hideModal {
-//   0% {
-//     z-index: 2;
-//     opacity: 1;
-//   }
-//   100% {
-//     opacity: 0;
-//     z-index: 0;
-//   }
-// }
+  100%{
+    opacity: 1;
+  }
+}

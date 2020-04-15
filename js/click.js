@@ -10,20 +10,22 @@
 
   clickableWork.forEach(function (work) {
     work.addEventListener("click", function (e) {
-    //   var div = e.target;
-     
-    //   console.log(img);
-      showModal();
+      toggleModal();
+      // window.scrollTo(300, 500)
+      // document.getElementById('title1').scrollIntoView({block: 'start', behavior: 'smooth'});
+
     });
   });
 
-  closeModalButton.addEventListener("click", closeModal);
+  closeModalButton.addEventListener("click", function(){
+    toggleModal();
+    console.log('close')
+  });
 
-  function showModal() {
-    modal.style.cssText = "opacity: 1; z-index: 2";
+  function toggleModal() {
+    modal.classList.toggle('toggleModal');
   }
 
-  function closeModal() {
-    modal.style.cssText = "opacity: 0; z-index: 0";
-  }
+
+
 })();

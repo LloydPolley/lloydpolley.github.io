@@ -1,41 +1,28 @@
 .footer{
-    margin-bottom: 10%;
-    width: 97vw;
-    max-width: 1400px;
-    margin: 3% auto;
-    text-align: center;
-    h2{
-        position: relative;
-        margin: 0;
-        padding: 0;
-        // border-bottom: 1px solid black;
-
-        &::after{
-            content: "";
-            width: 150px;
-            height: 3px;
-            background-color: black;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+    background-color: white;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 2em 0;
+    &__flex{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        max-width: 1000px;
+        width: 90%;
+        margin: 0 auto;
     }
-    &__icons{
-        margin: 3% auto 0;
+
+    &--title{
+        color: black;
+    }
+    &--text{
+        color: $mainText;
+    }
+
+    &__col{
         a{
-            text-decoration: none;
+            display: block;
+            margin-bottom: .5em;
         }
-        .ion-logo{
-            color: black;
-            font-size: 64px;
-            margin: 0 1%;
-        }
-    }
-
-    
-
-    .contact-link{
-
     }
 }
