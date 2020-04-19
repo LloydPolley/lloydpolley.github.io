@@ -16,6 +16,11 @@ body {
   background-image: url('https://www.freepik.com/free-photos-vectors/background');
 }
 
+.fixed{
+  // position: fixed;
+  overflow: hidden;
+}
+
 .page-container {
   margin: 0 auto;
   box-sizing: border-box;

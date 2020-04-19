@@ -17,18 +17,16 @@
 
 <body>
     <div class="modal">
-        <p class="close-modal--js modal__close"><ion-icon name="close-outline"></ion-icon></p>
+        <div class="close-modal--js modal__close"><ion-icon name="close-outline"></ion-icon></div>
         <div class="modal__content">
             <img src="./files/imgs/maps.jpg" />
             <div class="modal__text">
                 <h2>Countries</h2>
                 <p>React app which fetches from API</p>
-                <p>Tech used</p>
-                <ul>
-                    <li>React</li>
-                    <li>Sass</li>
-                </ul>
-                <a class="modal__link" href="">See site</a>
+                <div class="modal__link-container">
+                    <a class="modal--link webpage" href="" target="_blank">Web site</a>
+                    <a class="modal--link github" href="" target="_blank">Github</a>
+                </div>
             </div>
 
         </div>
@@ -48,23 +46,22 @@
             </div>
         </div>
         <section class="work-section page-section">
-            <div class="work-piece one-project">
+            <div class="work-piece one-project" data-work="country" id="mid">
                 <img src="./files/imgs/maps.jpg" />
                 <div class="work-piece__main">
-                    <h2>country</h2>
+                    <h2>Where in the world?</h2>
                 </div>
             </div>
-            <div class="work-piece two-project">
+            <div class="work-piece two-project" data-work="rock">
                 <img src="./files/imgs/rock.jpg" />
-
                 <div class="work-piece__main">
-                    <h2>rock paper<br>scissors</h2>
+                    <h2>Rock Paper<br>Scissors</h2>
                 </div>
             </div>
-            <div class="work-piece three-project">
+            <div class="work-piece three-project" data-work="music">
                 <img src="./files/imgs/music.jpg" />
                 <div class="work-piece__main">
-                    <h2>music service</h2>
+                    <h2>Soundport</h2>
                 </div>
             </div>
         </section>
