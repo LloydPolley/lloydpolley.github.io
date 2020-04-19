@@ -109,6 +109,7 @@
 }
 .work-piece img {
   width: 100%;
+  display: block;
 }
 .work-piece:hover::after {
   opacity: 0.25;
