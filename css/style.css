@@ -185,73 +185,59 @@ h2 {
     font-size: 4em;
   }
 }
-.icons {
-  color: #838383;
-  font-size: 32px;
-  z-index: 2;
-  transition: 0.5s ease-out color;
-}
-.icons:hover {
-  color: white;
-}
-
-.forward {
-  position: absolute;
-  right: 1%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.backward {
-  position: absolute;
-  left: 1%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 .hero {
   height: 100vh;
   position: relative;
   max-width: 1300px;
   width: 99vw;
   margin: 0 auto;
-}
-.hero .work-container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  max-width: 800px;
-  width: 90vw;
-  min-height: 500px;
-  background-image: url("../files/imgs/country-d.jpg");
-  background-size: 100% auto;
 }
-.hero .work-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-}
-.hero .work-container__box {
-  position: relative;
-}
-.hero .work-container h1 {
+.hero .hero-title {
   color: white;
   text-align: center;
   margin: 0;
-  width: 100%;
-  z-index: 2;
+  position: absolute;
 }
-.hero .work-container img {
-  max-width: 1000px;
+
+@media (min-width: 1000px) {
+  .adi {
+    max-width: 1300px;
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    max-height: 600px;
+    margin: 0 auto;
+    justify-content: space-between;
+    position: relative;
+  }
+  .adi__box {
+    box-sizing: border-box;
+    width: 32%;
+    transition: 0.3s ease-in-out all;
+    background-size: auto 100%;
+    clip-path: polygon(10 0%, 100% 0, 100% 100%, 0% 100%);
+    border: 1px solid black;
+  }
+  .adi__box:hover {
+    transform: scale(1.1);
+    width: 75%;
+  }
+  .adi__box:nth-child(1) {
+    background-position: 0%;
+    background-image: url("../files/imgs/patterns/lines.jpg");
+  }
+  .adi__box:nth-child(2) {
+    background-image: url("../files/imgs/patterns/swirl.jpg");
+    background-position: 50%;
+  }
+  .adi__box:nth-child(3) {
+    background-image: url("../files/imgs/patterns/paint.jpg");
+    background-position: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
