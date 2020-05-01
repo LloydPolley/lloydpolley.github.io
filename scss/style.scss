@@ -1,15 +1,12 @@
 @import "./footer.scss";
 @import "./modal.scss";
 
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
 
 $iconColour: rgb(131, 131, 131);
 
-
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -17,12 +14,14 @@ body {
   // background-color: #170e31;
   // background-image: url('../files/bg/doubleb.png');
   // background-image: url('../files/bg/circle-blues.png');
-  // background-color: #000724;
-  background-color: black;
-  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  background-color: #161616;
+  // background-color: black;
+  // background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  // background: linear-gradient(140deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+
 }
 
-.fixed{
+.fixed {
   // position: fixed;
   overflow: hidden;
 }
@@ -33,7 +32,7 @@ body {
   box-sizing: border-box;
 }
 
-nav{
+nav {
   color: white;
   position: fixed;
   width: 95%;
@@ -46,42 +45,39 @@ nav{
   flex-direction: row;
   justify-content: space-between;
 
-
-  div:nth-child(2){
+  div:nth-child(2) {
     display: flex;
     flex-direction: row;
 
-    a{
+    a {
       color: white;
     }
   }
 
-  .site-title{
+  .site-title {
     // text-transform: uppercase;
   }
 }
 
-
-h1{
+h1 {
   font-size: 7vw;
 }
 
-h2{
+h2 {
   font-size: 6vw;
   font-weight: 500;
 }
 
-@media(min-width: 700px){
-  h1{
+@media (min-width: 700px) {
+  h1 {
     font-size: 5em;
   }
-  h2{
+  h2 {
     font-size: 4em;
   }
 }
 
-
-.hero{
+.hero {
   height: 100vh;
   position: relative;
   max-width: 1300px;
@@ -91,7 +87,7 @@ h2{
   justify-content: space-around;
   flex-direction: column;
 
-  .hero-title{
+  .hero-title {
     color: white;
     text-align: center;
     margin: 0;
@@ -99,11 +95,8 @@ h2{
   }
 }
 
-
-
-
-@media(min-width: 1000px){
-  .adi{
+@media (min-width: 1000px) {
+  .adi {
     max-width: 1300px;
     width: 95vw;
     display: flex;
@@ -114,38 +107,46 @@ h2{
     justify-content: space-between;
     position: relative;
 
-
-    &__box{
+    &__box {
       box-sizing: border-box;
       width: 32%;
       // border: 2px solid white;
-      transition: .3s ease-in-out all;
+      transition: 0.3s ease-in-out all;
       background-size: auto 100%;
       clip-path: polygon(10 0%, 100% 0, 100% 100%, 0% 100%);
-      border: 1px solid black;
-
-
-
-
-      &:hover{
-        transform: scale(1.1);
-        width: 75%;
-        // z-index: 2;
-        // border: 3px solid rgb(170, 170, 170);
-        // flex-grow: 4;
+      // border: 1px solid black;
+      background-color: rgba(0, 0, 0, 0.479);
+      h2,
+      p {
+        color: white;
       }
 
-      &:nth-child(1){
+      &.full {
+        width: 98%;
+      }
+
+      &.hide {
+        width: 0%;
+      }
+
+      &:hover {
+        transform: translateY(-5%) scale(1.05);
+      }
+
+      &:nth-child(1) {
         background-position: 0%;
-        background-image: url('../files/imgs/patterns/lines.jpg');
-      }
-      &:nth-child(2){
-        background-image: url('../files/imgs/patterns/swirl.jpg');
-        background-position: 50%;
+        // background-image: url('../files/imgs/patterns/lines.jpg');
 
+        &:hover {
+          background-image: url("../files/imgs/patterns/lines.jpg");
+        }
       }
-      &:nth-child(3){
-        background-image: url('../files/imgs/patterns/paint.jpg');
+      &:nth-child(2) {
+        // background-image: url('../files/imgs/patterns/swirl.jpg');
+        background-position: 50%;
+      }
+      &:nth-child(3) {
+        // background-image: url('../files/imgs/patterns/paint.jpg');
         background-position: 100%;
       }
     }

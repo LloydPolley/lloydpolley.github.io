@@ -134,8 +134,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
-  background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+  background-color: #161616;
 }
 
 .fixed {
@@ -220,22 +219,31 @@ h2 {
     transition: 0.3s ease-in-out all;
     background-size: auto 100%;
     clip-path: polygon(10 0%, 100% 0, 100% 100%, 0% 100%);
-    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.479);
+  }
+  .adi__box h2,
+.adi__box p {
+    color: white;
+  }
+  .adi__box.full {
+    width: 98%;
+  }
+  .adi__box.hide {
+    width: 0%;
   }
   .adi__box:hover {
-    transform: scale(1.1);
-    width: 75%;
+    transform: translateY(-5%) scale(1.05);
   }
   .adi__box:nth-child(1) {
     background-position: 0%;
+  }
+  .adi__box:nth-child(1):hover {
     background-image: url("../files/imgs/patterns/lines.jpg");
   }
   .adi__box:nth-child(2) {
-    background-image: url("../files/imgs/patterns/swirl.jpg");
     background-position: 50%;
   }
   .adi__box:nth-child(3) {
-    background-image: url("../files/imgs/patterns/paint.jpg");
     background-position: 100%;
   }
 }
