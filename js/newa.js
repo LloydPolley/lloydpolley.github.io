@@ -1,29 +1,5 @@
 import wixData from "wix-data";
 
-// iTitle is search box
-
-// $w.onReady(function () {
-//   wixData
-//     .query("Items")
-//     .limit(1000)
-//     .find()
-//     .then((results) => {
-//         let optionsArray = [];
-//         console.log('run')
-//         console.log(results.items)
-//         results.items.filter((item)=>{
-//             console.log(item.assayType, 'foreach')
-//             if(optionsArray.contains()){
-//                 optionsArray.push(item.assayType);
-//             }
-//         })
-//         return optionsArray;
-//     //   const uniqueType = getUniqueTitles(results.items);
-//     //   $w("#iType").options = buildOptions(uniqueType);
-//     }).then((data)=>{
-//         console.log(data);
-//     });
-// });
 
 let searchValue = "";
 let filterValue = "All";
@@ -36,45 +12,54 @@ export function iTitle_keyPress(event, $w) {
     debounceTimer = undefined;
   }
   debounceTimer = setTimeout(() => {
-    filter($w("#iTitle").value);
+    var sVal = $w("#iTitle").value;
+    filter(sVal);
+    searchValue = sVal;
+    onInputChange(sVal);
+
   }, 200);
 }
 
 //Search filter
 let lastFilterTitle;
 function filter(title) {
-  searchValue = title;
-  console.log(title, "search");
   if (lastFilterTitle !== title) {
     $w("#dataset1").setFilter(wixData.filter().contains("title", title));
     lastFilterTitle = title;
   }
 }
+// let lastFilterTitle;
+// function filter(title) {
+//   searchValue = title;
+//   console.log(title, "search");
+//   if (lastFilterTitle !== title) {
+//     $w("#dataset1").setFilter(wixData.filter().contains("title", title));
+//     lastFilterTitle = title;
+//   }
+// }
 
 export function filterAssayType(event) {
   filterValue = event.target.value;
-  console.log(filterValue, "filter");
+  onInputChange();
   if (event.target.value !== "All") {
     $w("#dataset1").setFilter(
       wixData.filter().contains("assayType", event.target.value)
     );
   } else {
-    console.log(wixData);
     $w("#dataset1").setFilter(
-      wixData.filter()
+      wixData.filter().isNotEmpty('assayType')
     );
   }
 }
 
-// function onInputChange() {
-//   let filterInputValue;
-//   let searchInputValue;
-//   if (filterValue !== "All") {
-//     filterInputValue = wixData
-//       .filter()
-//       .contains("assayType", filterValue);
-//   }
-//   if(searchValue !== ''{
-//     searchValue
-//   })
-// }
+function onInputChange(title) {
+  // console.log(wixData.filter().contains("title", title), 'inputchange');
+  console.log(wixData.filter().contains("title", title).and(wixData.filter().isNotEmpty('assayType')));
+
+  if (searchValue === '') {
+    
+  }else{
+    $w("#dataset1").setFilter(wixData.filter().contains("title", title).and(wixData.filter().isNotEmpty('assayType')));
+
+  }
+}

@@ -21,6 +21,7 @@ function buildOptions(uniqueList) {
 }
 
 function getAll() {
+  console.log('getall')
   // Run a query that returns all the items in the collection
   wixData
     .query("Items")
