@@ -6,8 +6,17 @@ import wixData from "wix-data";
 let debounceTimer;
 let lastFilterTitle;
 
-let searchBarValue = $w('#iTitle');
-let dropDownValue = $w('#dropdown1');
+let searchBarValue;
+let dropDownValue;
+
+
+
+$w.onReady(function () {
+    dropDownPopulate();
+    searchBarValue = $w('#iTitle');
+    dropDownValue = $w('#dropdown1');
+});
+
 
 export function iTitle_keyPress() {
     // searchHandler();
@@ -33,15 +42,18 @@ function onInputChange() {
         $w("#dataset1").setFilter(
             wixData.filter().isNotEmpty('assayType')
         );
-    } else if (searchValue === '' && filterValue !== 'All') {
+    }
+    if (searchValue === '' && filterValue !== 'All') {
         $w("#dataset1").setFilter(
             wixData.filter().contains("assayType", filterValue)
         );
-    } else if (searchValue !== '' && filterValue === 'All') {
+    }
+    if (searchValue !== '' && filterValue === 'All') {
         debounceTimer = setTimeout(() => {
             $w("#dataset1").setFilter(wixData.filter().contains("title", $w("#iTitle").value));
         }, 200);
-    } else if (searchValue !== '' && filterValue !== 'All') {
+    }
+    if (searchValue !== '' && filterValue !== 'All') {
         debounceTimer = setTimeout(() => {
             $w("#dataset1").setFilter(wixData.filter().contains("title", $w("#iTitle").value).and(wixData.filter().contains("assayType", filterValue)));
         }, 200);
@@ -52,41 +64,27 @@ function onInputChange() {
 
 
 
-function getAll() {
-    console.log('getall')
-    // Run a query that returns all the items in the collection
+function dropDownPopulate() {
     wixData
         .query("Items")
-        // Get the max possible results from the query
         .limit(1000)
         .find()
         .then((results) => {
-            // Call the function that creates a list of unique titles
-            // const uniqueType = getUniqueTitles(results.items);
-            console.log(results.items)
-            let dropValuesAll = results.items.map((item)=>{
-                return item.assayType;
-            })
-            const uniqueVals = new Set(dropValuesAll);
-            const back = [...uniqueVals]
-
+            let dropDownOptions = [];
             let opts = dropDownValue.options;
 
-
-            let backObj = back.map((backItem)=>{
-                opts.push({"label": backItem, "value": backItem});
-                // return {"label": backItem, "value": backItem}
+            results.items.map((item)=>{
+                if(!dropDownOptions.includes(item.assayType)){
+                    dropDownOptions.push(item.assayType);
+                    opts.push({"label": item.assayType, "value": item.assayType});
+                }
             })
-
+     
             dropDownValue.options = opts;
             
         });
 }
 
-
-$w.onReady(function () {
-    getAll();
-});
 
 
 
