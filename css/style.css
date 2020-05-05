@@ -219,7 +219,7 @@ h2 {
     transition: 0.3s ease-in-out all;
     background-size: auto 100%;
     clip-path: polygon(10 0%, 100% 0, 100% 100%, 0% 100%);
-    background-color: rgba(0, 0, 0, 0.479);
+    background-color: rgba(0, 0, 0, 0.1);
   }
   .adi__box h2,
 .adi__box p {
@@ -236,9 +236,6 @@ h2 {
   }
   .adi__box:nth-child(1) {
     background-position: 0%;
-  }
-  .adi__box:nth-child(1):hover {
-    background-image: url("../files/imgs/patterns/lines.jpg");
   }
   .adi__box:nth-child(2) {
     background-position: 50%;
