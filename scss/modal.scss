@@ -2,6 +2,24 @@ body {
   position: relative;
 }
 
+.dark-mode{
+  .modal{
+    background-color: rgb(0, 0, 0);
+    &__text{
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    &__close{
+      color: white;
+    }
+    p,h2{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+  }
+}
+
 .modal {
   position: fixed;
   height: 100%;

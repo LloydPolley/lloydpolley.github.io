@@ -2,10 +2,25 @@
   margin-bottom: 3em;
 }
 
+.dark-mode{
+  .work-piece{
+    &::after{
+      background-color: rgba(0, 0, 0, 0.5);
+      &:hover{
+      
+      }
+    }
+    h2,p{
+      color: rgb(221, 221, 221);
+    }
+  }
+  
+}
+
 .work-piece {
   width: 90vw;
   max-width: 1000px;
-  margin: 3em auto;
+  margin: 0em auto 6em;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -25,7 +40,7 @@
   
 
   img{
-    width: 100%;
+    width: 150%;
     display: block;
   }
 
@@ -68,6 +83,10 @@
 @media(min-width: 1000px){
   .work-piece{
     margin: 10em auto;
+
+    img{
+      width: 100%;
+    }
   }
 }
 
