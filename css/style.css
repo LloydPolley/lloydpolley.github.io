@@ -8,7 +8,7 @@
 
 .hero {
   position: relative;
-  height: 100vh;
+  height: 95vh;
 }
 .hero .hero-content {
   position: absolute;
@@ -28,6 +28,11 @@
   color: #575757;
 }
 
+@media (min-width: 700px) {
+  .hero {
+    height: 100vh;
+  }
+}
 .hero-bg-anim {
   position: absolute;
   width: 100%;

@@ -9,7 +9,7 @@ $mainText: #575757;
 
 .hero {
   position: relative;
-  height: 100vh;
+  height: 95vh;
 
   .hero-content {
     position: absolute;
@@ -31,7 +31,11 @@ $mainText: #575757;
     color: $mainText;
   }
 }
-
+@media(min-width: 700px){
+  .hero{
+    height: 100vh;
+  }
+}
 
 
 .hero-bg-anim {
